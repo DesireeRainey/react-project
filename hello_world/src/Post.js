@@ -11,7 +11,8 @@ class Hello extends Component {
     return ( 
       <div className="Hello">
         <h1>{this.props.title}</h1>
-        <Authors />
+        <h2>{this.props.author}</h2>
+        {this.props.allAuthors.map(authors => <p>Written by: {authors}</p>)}        
         <h2>{this.props.author}</h2>
         <p>{this.props.body}</p>
         <p>{this.props.comments[0]}</p>
