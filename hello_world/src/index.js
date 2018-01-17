@@ -1,26 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Hello from './Post';
+import Post from './Post';
 import registerServiceWorker from './registerServiceWorker';
 
-let post = {
- title: "Kitty, Kitty, Meow, Meow",
- author: "Snicklefriz the Cat",
- body: "Kitty like birds.",
- comments: [
-  "WOW, a cat wrote a book!",
-  "Beautifully meowed",
-  "Not even Hemmingway could have done better"
- ],
- allAuthors: [
-  "Stealthy Stegosaurus ",
-  "Tiny T-Rex ",
-  "Ivory Iguanodon "
- ]
-};
+var posts = [{
+  title: 'Dinos rule!',
+  content: 'We are so neat',
+  author: 'T-Rex; King of Dinos',
+  comments: ['Eh, dinos are okay', 'Yeah, go dinos']
+}, {
+  title: 'So offended',
+  content: 'I am from way, way longer ago than these young dinos. Jurassic rules, cretaceous sucks!',
+  author: 'Stegasaurus',
+  comments: ['Cool it', 'Who cares, bro', 'Triassic or nothing!']
+}];
 
 //root in the index.html is where this is being rendered
-ReactDOM.render(<Hello title={post.title} author={post.author} body={post.body} 
-	comments={post.comments} allAuthors={post.allAuthors} />, document.getElementById('root'));
+ReactDOM.render(<Post posts={posts}  />, document.getElementById('root'));
 registerServiceWorker();
